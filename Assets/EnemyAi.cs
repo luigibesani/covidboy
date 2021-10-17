@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyAi : MonoBehaviour
 {
     public float speed;
+    public float isolationWaitTime;
+
 
     private float waitTime;
     public float startWaitTime;
@@ -14,7 +16,7 @@ public class EnemyAi : MonoBehaviour
     public float minY;
     public float maxY;
 
-    Vector2 wayPoint;
+    public Vector2 wayPoint;
 
 
 
@@ -22,7 +24,6 @@ public class EnemyAi : MonoBehaviour
     void Start()
     {
         SetNewDestination();
-        waitTime = startWaitTime;
     }
 
     // Update is called once per frame
@@ -35,7 +36,6 @@ public class EnemyAi : MonoBehaviour
             if (waitTime <= 0) 
             {
                 SetNewDestination();
-                waitTime = startWaitTime;
             }
             else
             {
@@ -47,5 +47,12 @@ public class EnemyAi : MonoBehaviour
     void SetNewDestination() 
     { 
         wayPoint = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        waitTime = startWaitTime;
+    }
+
+    public void SetIsolationDestination()
+    {
+        wayPoint = new Vector2(Random.Range(maxX+1f, maxX+2f), Random.Range(maxY+1f, maxY+2f));
+        waitTime = isolationWaitTime;
     }
 }

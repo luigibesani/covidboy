@@ -43,6 +43,14 @@ public class PlayerMovement : MonoBehaviour
                 collision.gameObject.tag = "mask_novax";
             }
         }
+        if (collision.gameObject.tag == "infected_character")
+        {
+            if (spacebarStatus)
+            {
+                var enemyAIComponent = collision.gameObject.GetComponent<EnemyAi>();
+                enemyAIComponent.SetIsolationDestination();
+            }
+        }
 
     }
 
