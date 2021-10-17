@@ -6,6 +6,9 @@ TagManager:
   tags:
   - player_character
   - infected_area
+  - infected_character
+  - nomask_novax
+  - mask_novax
   layers:
   - Default
   - TransparentFX
