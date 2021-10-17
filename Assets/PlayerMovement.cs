@@ -16,12 +16,35 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement = movement.normalized;
-        spacebarStatus = Input.GetKeyDown("space");
     }
 
     void FixedUpdate()
     {
         rigidBody.MovePosition(rigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        bool spacebarStatus = getSpaceBarInput();
+        if (collision.gameObject.tag == "infected_area")
+        {
+            if (spacebarStatus)
+            {
+                collision.gameObject.SetActive(false);
+
+            }
+        }
+
+    }
+
+    private bool getSpaceBarInput() 
+    {
+        if (Input.GetKey("space")) 
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
 
