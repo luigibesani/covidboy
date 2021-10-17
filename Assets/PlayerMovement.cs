@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
             if (spacebarStatus)
             {
                 var enemyAIComponent = collision.gameObject.GetComponent<EnemyAi>();
-                enemyAIComponent.wayPoint = new Vector2(Random.Range(enemyAIComponent.maxX+0.5f, enemyAIComponent.maxX+1.5f), Random.Range(enemyAIComponent.minY, enemyAIComponent. maxY));
+                enemyAIComponent.SetIsolationDestination();
             }
         }
 
