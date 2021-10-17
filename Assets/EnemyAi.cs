@@ -14,7 +14,7 @@ public class EnemyAi : MonoBehaviour
     public float minY;
     public float maxY;
 
-    Vector2 wayPoint;
+    public Vector2 wayPoint;
 
 
 
