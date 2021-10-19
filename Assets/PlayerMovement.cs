@@ -41,6 +41,13 @@ public class PlayerMovement : MonoBehaviour
                 collision.gameObject.GetComponent<NoMaskController>().SetMaskSprite();
             }
         }
+        if (collision.gameObject.tag == "at_risk_ill")
+        {
+            if (spacebarStatus)
+            {
+                collision.gameObject.GetComponent<AtRiskController>().SetOriginalSprite();
+            }
+        }
         if (collision.gameObject.tag == "infected_character")
         {
             if (spacebarStatus)
@@ -49,7 +56,6 @@ public class PlayerMovement : MonoBehaviour
                 enemyAIComponent.SetIsolationDestination();
             }
         }
-
     }
 
     private bool getSpaceBarInput() 
