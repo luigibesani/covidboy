@@ -34,11 +34,11 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
-        if (collision.gameObject.tag == "nomask_novax")
+        if (collision.gameObject.tag == "nomask_novax" || collision.gameObject.tag == "nomask_novax_ill")
         {
             if (spacebarStatus)
             {
-                collision.gameObject.GetComponent<NoMaskController>().SetNewSprite();
+                collision.gameObject.GetComponent<NoMaskController>().SetMaskSprite();
             }
         }
         if (collision.gameObject.tag == "infected_character")
