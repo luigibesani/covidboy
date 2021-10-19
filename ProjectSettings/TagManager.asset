@@ -12,6 +12,8 @@ TagManager:
   - nomask_novax_ill
   - at_risk
   - at_risk_ill
+  - vaccinated
+  - vaccinated_ill
   layers:
   - Default
   - TransparentFX

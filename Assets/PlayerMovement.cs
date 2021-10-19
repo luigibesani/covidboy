@@ -48,6 +48,13 @@ public class PlayerMovement : MonoBehaviour
                 collision.gameObject.GetComponent<AtRiskController>().SetOriginalSprite();
             }
         }
+        if (collision.gameObject.tag == "vaccinated_ill")
+        {
+            if (spacebarStatus)
+            {
+                collision.gameObject.GetComponent<VaccinatedController>().SetOriginalSprite();
+            }
+        }
         if (collision.gameObject.tag == "infected_character")
         {
             if (spacebarStatus)
