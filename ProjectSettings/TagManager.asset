@@ -9,6 +9,9 @@ TagManager:
   - infected_character
   - nomask_novax
   - mask_novax
+  - nomask_novax_ill
+  - at_risk
+  - at_risk_ill
   layers:
   - Default
   - TransparentFX
