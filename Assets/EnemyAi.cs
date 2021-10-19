@@ -18,8 +18,6 @@ public class EnemyAi : MonoBehaviour
 
     public Vector2 wayPoint;
 
-
-
     // Start is called before the first frame update
     void Start()
     {

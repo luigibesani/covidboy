@@ -697,7 +697,6 @@ GameObject:
   - component: {fileID: 2023510186}
   - component: {fileID: 2023510185}
   - component: {fileID: 2023510188}
-  - component: {fileID: 2023510189}
   m_Layer: 0
   m_Name: infected_character
   m_TagString: infected_character
@@ -816,15 +815,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &2023510189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023510184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6797fe0cee15de9429a8c19c20126d77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

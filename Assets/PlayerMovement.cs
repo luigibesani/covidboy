@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     //public Animator animator;
     Vector2 movement;
     public bool spacebarStatus;
-    public Sprite newSprite;
 
     // Update is called once per frame
     void Update()
@@ -39,8 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (spacebarStatus)
             {
-                collision.gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
-                collision.gameObject.tag = "mask_novax";
+                collision.gameObject.GetComponent<NoMaskController>().SetNewSprite();
             }
         }
         if (collision.gameObject.tag == "infected_character")
