@@ -15,6 +15,7 @@ public class EnemyAi : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+    private bool isInIsolation = false;
 
     public Vector2 wayPoint;
 
@@ -31,6 +32,10 @@ public class EnemyAi : MonoBehaviour
 
         if (Vector2.Distance(transform.position, wayPoint) < 0.2f)
         {
+            if (isInIsolation) 
+            {
+                Destroy(gameObject);
+            }
             if (waitTime <= 0) 
             {
                 SetNewDestination();
@@ -50,7 +55,8 @@ public class EnemyAi : MonoBehaviour
 
     public void SetIsolationDestination()
     {
-        wayPoint = new Vector2(Random.Range(maxX+1f, maxX+2f), Random.Range(maxY+1f, maxY+2f));
+        wayPoint = new Vector2(Random.Range(maxX + 1f, maxX + 2f), Random.Range(maxY + 1f, maxY + 2f));
         waitTime = isolationWaitTime;
+        isInIsolation = true;
     }
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7824575832423837175}
   m_Layer: 0
   m_Name: at_risk_character
-  m_TagString: Untagged
+  m_TagString: at_risk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,9 +161,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   isolationWaitTime: 0
-  startWaitTime: 0
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
+  startWaitTime: 3
+  minX: -4
+  maxX: 4
+  minY: -2
+  maxY: 2
   wayPoint: {x: 0, y: 0}
