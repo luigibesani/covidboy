@@ -28,7 +28,6 @@ public class WaveSpawner : MonoBehaviour
         Instantiate(randomEnemy, randomPoint.position, Quaternion.identity);
         StartCoroutine(SpawnWave());
     }
-
   }
 
 
