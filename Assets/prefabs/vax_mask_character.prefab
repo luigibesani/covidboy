@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3211737992257050090}
   - component: {fileID: 3211737992257050087}
   - component: {fileID: 3211737992257050086}
-  m_Layer: 0
+  - component: {fileID: 4861267303145513063}
+  m_Layer: 6
   m_Name: vax_mask_character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.019670486, y: 0}
@@ -167,3 +168,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infectedSprite: {fileID: 21300000, guid: 3c72085aa996cfc4097aefcbeab88c56, type: 3}
   originalSprite: {fileID: 21300000, guid: f479279662214774f9ebd1e6fa46859f, type: 3}
+--- !u!114 &4861267303145513063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211737992257050093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d1abbbc970e8642b34441f81a5b7dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

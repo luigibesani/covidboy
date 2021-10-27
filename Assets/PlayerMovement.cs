@@ -23,43 +23,50 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.MovePosition(rigidBody.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         bool spacebarStatus = getSpaceBarInput();
-        if (collision.gameObject.tag == "infected_area")
+        var collisionObject = collision.gameObject;
+        if (collisionObject.tag == "infected_area")
         {
             if (spacebarStatus)
             {
-                collision.gameObject.SetActive(false);
-
+                collisionObject.SetActive(false);
             }
         }
-        if (collision.gameObject.tag == "nomask_novax" || collision.gameObject.tag == "nomask_novax_ill")
+        if (collisionObject.tag == "nomask_novax")
         {
             if (spacebarStatus)
             {
-                collision.gameObject.GetComponent<NoMaskController>().SetMaskSprite();
+                collisionObject.GetComponent<NoMaskController>().SetMaskSprite();
             }
         }
-        if (collision.gameObject.tag == "at_risk_ill")
+        if (collisionObject.tag == "nomask_novax_ill")
         {
             if (spacebarStatus)
             {
-                collision.gameObject.GetComponent<AtRiskController>().SetOriginalSprite();
+                collisionObject.GetComponent<NoMaskController>().SetNoMaskSprite();
             }
         }
-        if (collision.gameObject.tag == "vaccinated_ill")
+        if (collisionObject.tag == "at_risk_ill")
         {
             if (spacebarStatus)
             {
-                collision.gameObject.GetComponent<VaccinatedController>().SetOriginalSprite();
+                collisionObject.GetComponent<AtRiskController>().SetOriginalSprite();
             }
         }
-        if (collision.gameObject.tag == "infected_character")
+        if (collisionObject.tag == "vaccinated_ill")
         {
             if (spacebarStatus)
             {
-                var enemyAIComponent = collision.gameObject.GetComponent<EnemyAi>();
+                collisionObject.GetComponent<VaccinatedController>().SetOriginalSprite();
+            }
+        }
+        if (collisionObject.tag == "infected_character")
+        {
+            if (spacebarStatus)
+            {
+                var enemyAIComponent = collisionObject.GetComponent<EnemyAi>();
                 enemyAIComponent.SetIsolationDestination();
             }
         }

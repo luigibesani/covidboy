@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1485098274540684849}
   - component: {fileID: 1485098274540684848}
   - component: {fileID: 1485098274540684844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: player_character
   m_TagString: player_character
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01720488, y: -0.0040964037}

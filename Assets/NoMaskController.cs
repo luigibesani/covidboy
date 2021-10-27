@@ -8,11 +8,17 @@ public class NoMaskController : MonoBehaviour
     public Sprite maskSprite;
     public Sprite infectedMaskSprite;
     public Sprite infectedNoMaskSprite;
-
+    public Sprite noMaskNoVax;
     public void SetMaskSprite() 
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = maskSprite;
         gameObject.tag = "mask_novax";
+    }
+
+    public void SetNoMaskSprite()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = noMaskNoVax;
+        gameObject.tag = "nomask_novax";
     }
 
     public void SetIllSprite()
